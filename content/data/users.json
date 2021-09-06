@@ -1,0 +1,23 @@
+[
+    {
+        "name": "moni",
+        "color": "blue",
+        "mark": 100,
+        "available": true,
+        "image": "content/img/moni.jpg"
+    },
+    {
+       "name": "karthi",
+        "color":"green",
+        "mark": 90,
+        "available": true,
+        "image": "content/img/mine.jpeg"
+    },
+    {
+        "name": "monica",
+        "color": "red",
+        "mark": 80,
+        "available": true,
+        "image": "content/img/mine.jpeg"
+    }
+]

@@ -1,0 +1,21 @@
+<div class="content">
+    <!-- <ng-include src="'practice-include.html'"></ng-include> -->
+    
+      <div ng-controller="app-controller-1">
+          <button ng-click="order = 'name'">Order by Name</button> 
+          <button ng-click="order = 'mark'">Order by Price</button> 
+        <input type="text" ng-model="search" placeholder="search">
+        <ul><li ng-repeat="item in messages | orderBy: order | filter: search" ng-hide="!item.available">
+            {{item.name}} - {{item.mark | currency: 'RS'}}
+            <img ng-src="{{item.image}}" alt="Image" ng-show="item.image"/>
+          <div class="remove" ng-click="removeItem(item)">x</div>
+          <span class="belt" style="background: {{item.color}};">{{item.color}}</span>
+      </li></ul>
+      <form ng-submit="add_message()">
+          <input type=" placeholder" ng-model="new_item.mark" placeholder="Enter Mark">
+          <input type=" placeholder" ng-model="new_item.name" placeholder="Enter name">
+          <input type=" placeholder" ng-model="new_item.color" placeholder="Enter Colour">
+          <input type="submit" value="Add New Item">
+      </form>
+      </div>
+  </div>
