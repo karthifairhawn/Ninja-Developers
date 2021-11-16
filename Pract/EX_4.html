@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chrset="UTF 8">
+    <title>Event Registration</title>
+</head>
+<body>
+
+<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+
+<h1> Custom filter demo</h1>
+
+<div ng-app="DemoApp" ng-controller="DemoController">
+
+    This Program is {{ tutorial | Demofilter}}
+
+
+</div>
+<script>
+    var app = angular.module('DemoApp',[]);
+
+    app.filter('Demofilter',function(){
+        return function(input)
+        {
+            return input + " Tutorial"
+        }
+    });
+
+    app.controller('DemoController',function($scope){
+        $scope.tutorial ="Angular JS";
+     });
+
+</script>
+
+</body>
+</html>
